@@ -22,6 +22,8 @@ html, body {
 .tweet{
   width: 100%;
   height: 100%;
+  border: none;
+  
 }
 .profile{
   align: left;
@@ -30,4 +32,7 @@ html, body {
 .link{
   font-family: sans-serif;
   color: green;
+}
+li{
+  display: none;
 }
