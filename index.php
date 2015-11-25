@@ -49,11 +49,30 @@ $tweetData = json_decode($twitter->setGetfield($getfield)
     echo $tweetData;
 foreach($tweetData['statuses'] as $items)
 {
-  echo "<div class='twitter-tweet'>Tweet:" . $items['text'] . "'</div>'";
-  echo "When: " . $items['created_at'] . "</br>";
-
 
 }
+$response = $twitter->setGetfield($getfield)
+             ->buildOauth($url, $requestMethod)
+             ->performRequest();
+
+$obj = json_decode($response, true);
+echo "<div><ul>";
+foreach ($obj["statuses"] as $index => $result) {
+
+$tweet = $result['text'];
+$user = $result['user']['screen_name'];
+$profile_image = $result['user']['profile_image_url'];
+
+echo "<li>";
+echo "<img class='profile' src=\"".$profile_image."\" width=\"25px\" height=\"25px\" />";
+echo "<a class='link' href=\"http://twitter.com/$user\">@$user</a>";
+echo " $tweet";
+    echo "</li>";
+}
+
+echo "</ul></div>";
+
+
 
     ?>
   </body>
