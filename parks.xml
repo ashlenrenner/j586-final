@@ -1,6 +1,8 @@
 
       <park>
-        <title>Mount Mitchell State Park</title>
-        <lat>35.752800</lat>
-        <long>-82.273700</long>
+        <row>
+          <title>Mount Mitchell State Park</title>
+          <lat>35.752800</lat>
+          <long>-82.273700</long>
+        </row>
       </park>
