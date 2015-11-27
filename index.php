@@ -36,7 +36,7 @@ $settings = array(
 /** Perform a GET request and echo the response **/
 /** Note: Set the GET field BEFORE calling buildOauth(); **/
 $url = 'https://api.twitter.com/1.1/search/tweets.json';
-$getfield = '?q=ncstateparks';
+$getfield = '?q=ncparks';
 $requestMethod = 'GET';
 $twitter = new TwitterAPIExchange($settings);
 // echo $twitter->setGetfield($getfield)
@@ -66,6 +66,7 @@ $user = $result['user']['screen_name'];
 $profile_image = $result['user']['profile_image_url'];
 
 echo "<div class='tweet-content'>";
+echo "<img class='tweet-img' src=\"".$profile_banner."\"  />";
 echo "<img class='profile' src=\"".$profile_image."\" width=\"25px\" height=\"25px\" />";
 echo "<a class='link' href=\"http://twitter.com/$user\">@$user</a>";
 echo " $tweet";

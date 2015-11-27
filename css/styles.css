@@ -18,12 +18,13 @@ html, body {
 
 }
 /*Twitter styles*/
-.fa-twitter{
+.fa-twitter .btn-social-icon{
   align: right;
 }
 .tweet{
   width: 90%;
   height: 100%;
+  border: none;
 
 
 }

@@ -31,12 +31,12 @@
 <!-- Swiper  -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.5/css/swiper.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.5/css/swiper.min.css">
-      <link rel="stylesheet" href="css/swiper.min.css">
+      <!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.5/js/swiper.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.5/js/swiper.min.js"></script>
-      <!-- <script src="js/swiper.min.js"></script> -->
+      <script src="js/swiper.min.js"></script>
       <script rel="stylesheet" src="js/swiper.js"></script>
-      <!-- tinyscroll script -->
+  <!-- tinyscroll script -->
       <script rel"stylesheet" src="js/jquery.tinyscrollbar.min.js"></script>
     <!-- Twitter linkit -->
     <!-- <script src="tweetLinkIt.js"></script> -->
@@ -54,15 +54,11 @@
     <!--  nav bar -->
      <nav class="navbar navbar-default"></nav>
 
-      <div class="row">
-    <!-- <h1>North Carolina State Parks</h1> -->
-  </div>
   <!-- Slider main container -->
   <div class="swiper-container">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
-          <!-- Slides -->
-
+<!-- Slides -->
 <!-- map slide -->
 <div class="swiper-slide">
             <!-- Map scripts -->
@@ -77,7 +73,7 @@
   <div class="swiper-slide">
             <script type="text/javascript">
 
-                var html = "parks"  // string to hold data before writing to page
+                var html = ""  // string to hold data before writing to page
                 //use any of the flickr api endpoints
                 var apiurl = "https://api.flickr.com/services/feeds/photos_public.gne?tags=ncparks&format=json&jsoncallback=?"
                 $(document).ready(function(){
@@ -104,17 +100,19 @@
 
 <!-- Twitter slide -->
     <div class="swiper-slide">
-    <a class="btn btn-social-icon btn-twitter">
-      <span class="fa fa-twitter"></span>
-    </a>
-
-            <iframe class="tweet" src="index.php"></iframe>
-      
-          </div>
-
+      <div>
+        <a class="btn btn-social-icon btn-twitter">
+          <div class="fa fa-twitter"></div>
+        </a>
       </div>
+            <iframe class="tweet" src="index.php"></iframe>
+    </div>
+
+
+
+
       <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
+      <!-- <div class="swiper-pagination"></div> -->
 
       <!-- If we need navigation buttons -->
       <!-- <div class="swiper-button-prev"></div>
@@ -122,7 +120,9 @@
 
       <!-- If we need scrollbar -->
       <!-- <div class="swiper-scrollbar"></div> -->
-  </div>
+
+  </div> <!-- closes swiper wrapper-->
+</div> <!--closes slider container-->
 
 
 

@@ -2,15 +2,13 @@ $(document).ready(function () {
    //initialize swiper when document ready
    var mySwiper = new Swiper ('.swiper-container', {
      // Optional parameters
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
+        initialSlide: 0,
         slidesPerView: 1,
-        paginationClickable: true,
-        runCallbacksOnInit: true,
+        followFinger: true,
+        loopAdditionalSlides: 0,
+        direction: 'horizontal',
+        loop: true
 
-        loop: true,
-     direction: 'horizontal'
 
    })
 
