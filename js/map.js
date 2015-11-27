@@ -3,6 +3,9 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 35.5000, lng: -80.0000},
     zoom: 6,
+    mapTypeControl: false,
+    panControl: false,
+    streetViewControl: false,
     mapTypeId: google.maps.MapTypeId.HYBRID
   });
 

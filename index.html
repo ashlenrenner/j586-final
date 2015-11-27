@@ -11,6 +11,8 @@
     <!-- CSS stylesheet -->
       <link rel="stylesheet" href="css/styles.css">
       <link rel="stylesheet" href="css/font-awesome.min.css">
+      <!-- tinyscroll -->
+        <link rel="stylesheet" href="css/tinyscrollbar.css">
 
 
     <!-- Bootstrap -->
@@ -33,8 +35,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.5/js/swiper.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.5/js/swiper.min.js"></script>
       <!-- <script src="js/swiper.min.js"></script> -->
-      <script src="js/swiper.js"></script>
-
+      <script rel="stylesheet" src="js/swiper.js"></script>
+      <!-- tinyscroll script -->
+      <script rel"stylesheet" src="js/jquery.tinyscrollbar.min.js"></script>
     <!-- Twitter linkit -->
     <!-- <script src="tweetLinkIt.js"></script> -->
 
@@ -59,8 +62,9 @@
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
           <!-- Slides -->
-        <div class="swiper-slide">
+
 <!-- map slide -->
+<div class="swiper-slide">
             <!-- Map scripts -->
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAtg-NY0mR5JxGHWAPGZtSQoi-FIj6Zro&callback=initMap"
                 async defer></script>
@@ -68,18 +72,20 @@
               <div id="map"></div>
 
           </div>
-          <div class="swiper-slide">
+
   <!-- flickr slide -->
+  <div class="swiper-slide">
             <script type="text/javascript">
-                var html = ""  // string to hold data before writing to page
+
+                var html = "parks"  // string to hold data before writing to page
                 //use any of the flickr api endpoints
-                var apiurl = "https://api.flickr.com/services/feeds/photos_public.gne?tags=north_carolina_parks&format=json&jsoncallback=?"
+                var apiurl = "https://api.flickr.com/services/feeds/photos_public.gne?tags=ncparks&format=json&jsoncallback=?"
                 $(document).ready(function(){
                         console.log("document ready")
                         $.getJSON(apiurl,function(json){
                             console.log(json);
                             //code for outside loop
-                            html = "<h1>" + json.title + "</h1>"
+                            // html = "<h1>" + json.title + "</h1>"
 
                             $.each(json.items, function(i, data){
                               html += "<p>" + data.title + "</p>";
@@ -90,15 +96,20 @@
                             $("#results").append(html);
                         });
                       });
+                        console.log("loaded flickr");
             </script>
-              <div id="results"></div>
-          </div>
-          <div class="swiper-slide">
+
+              <div class="results" id="results"></div>
+        </div>
+
 <!-- Twitter slide -->
+    <div class="swiper-slide">
     <a class="btn btn-social-icon btn-twitter">
       <span class="fa fa-twitter"></span>
     </a>
+
             <iframe class="tweet" src="index.php"></iframe>
+      
           </div>
 
       </div>
@@ -106,8 +117,8 @@
       <div class="swiper-pagination"></div>
 
       <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
 
       <!-- If we need scrollbar -->
       <!-- <div class="swiper-scrollbar"></div> -->

@@ -8,8 +8,16 @@ $(document).ready(function () {
         slidesPerView: 1,
         paginationClickable: true,
         runCallbacksOnInit: true,
+
         loop: true,
      direction: 'horizontal'
 
    })
+
+// tinyscrollbar
+
+$("#scrollbar1").tinyscrollbar(
+  touchLock = true
+
+);
  });
