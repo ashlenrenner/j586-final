@@ -1,7 +1,6 @@
 html, body {
   height: 100%;
-  margin: 5%;
-  padding: 0;
+
 }
 .swiper-container {
     width: 100%;
@@ -15,24 +14,32 @@ html, body {
   width: 100%;
 }
 #map {
-  height: 50%;
+  height: 60%;
 
 }
 /*Twitter styles*/
+.fa-twitter{
+  align: right;
+}
 .tweet{
   width: 100%;
   height: 100%;
   border: none;
-  
-}
-.profile{
-  align: left;
 
 }
+
 .link{
   font-family: sans-serif;
   color: green;
 }
-li{
-  display: none;
+
+.tweet-content{
+padding: 10px;
+margin: 10px;
+border: 1px solid gray;
+border-radius: 10px;
+}
+.profile{
+  align: right;
+  margin: 5px;
 }

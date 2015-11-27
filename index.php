@@ -1,5 +1,7 @@
 <html>
 <head>
+  <link rel="stylesheet" href="css/styles.css">
+
 </head>
   <body>
 
@@ -63,11 +65,12 @@ $tweet = $result['text'];
 $user = $result['user']['screen_name'];
 $profile_image = $result['user']['profile_image_url'];
 
-echo "<li>";
+echo "<div class='tweet-content'>";
 echo "<img class='profile' src=\"".$profile_image."\" width=\"25px\" height=\"25px\" />";
 echo "<a class='link' href=\"http://twitter.com/$user\">@$user</a>";
 echo " $tweet";
-    echo "</li>";
+echo "<div class='time'>"  . $items['created_at'] . "</div>";
+    echo "</div>";
 }
 
 echo "</ul></div>";
