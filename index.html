@@ -18,6 +18,9 @@
     <!-- Bootstrap -->
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+      <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+       <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+   </head>
       <!-- Optional theme -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 <link href="http://getbootstrap.com/favicon.ico" rel="stylesheet">
@@ -52,10 +55,16 @@
 
   <body>
     <!--  nav bar -->
-     <nav class="navbar navbar-default"></nav>
+     <nav class="navbar navbar-custom">
+       <div class="col-sm-4">
+      <button type="button"  class="btn btn-secondary map-btn">Map</button>
+      <button type="button"  class="btn btn-secondary flickr-btn">Flickr</button>
+      <button type="button"  class="btn btn-secondary twitter-btn">Twitter</button>
+    </div>
+     </nav>
 
   <!-- Slider main container -->
-  <div class="swiper-container">
+      <div class="swiper-container">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
 <!-- Slides -->
@@ -66,7 +75,7 @@
                 async defer></script>
             <script src="js/map.js"></script>
               <div id="map"></div>
-
+              <div>Tap the map for information about NC State Parks.</div>
           </div>
 
   <!-- flickr slide -->

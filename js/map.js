@@ -38,17 +38,28 @@ function initMap() {
 // } //closes parseData function
 //
 // function buildMarker(xml){
+var contentString1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h4 id="firstHeading" class="firstHeading">Bay Tree State Park</h4>'+
+      '<div id="bodyContent">'+
+      '<p>The most prominent feature of Bay Tree Lake State Park is a 609-acre Carolina bay lake.</p>'+
+      '<a href="http://ncbirdingtrail.org/sites/2012/8/1/bay-tree-lake-state-park.html">'+
+      'http://ncbirdingtrail.org/sites/2012/8/1/bay-tree-lake-state-park.html</a> </p>'+
+      '</div>'+
+      '</div>';
 
-  var marker = new google.maps.Marker({
-    position: {lat:35.752800, lng:-82.273700},
-    map: map,
-    title: 'Mount Mitchell State Park'
+  var infowindow1 = new google.maps.InfoWindow({
+    content: contentString1
   });
-  var marker = new google.maps.Marker({
-    position: {lat:34.675988, lng:-78.426876},
+  var marker1 = new google.maps.Marker({
+    position: {lat:34.675988, lng:-78.4268758},
     map: map,
     title: 'Bay Tree State Park'
   });
-// }
-// })
-}
+  google.maps.event.addListener(marker1, 'click', function(){
+                   infowindow1.open(marker1.get('map'), marker1);
+                   });
+
+
+} //closes doc ready
