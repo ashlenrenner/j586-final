@@ -83,11 +83,16 @@ body{
   	overflow-y: scroll;
 
 	/* important:  dimensions or positioning here! */
+  position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
 }
 
 .scroll-wrapper iframe {
-  -webkit-overflow-scrolling: touch;
-  	overflow-y: scroll;
+
 }
 
 .link{
@@ -97,6 +102,7 @@ body{
 
 .tweet-content{
   background-color: #CBDFC0;
+  font-family: Helvetica;
   padding: 10px;
   margin: 10px;
   border: 1px solid gray;
@@ -105,4 +111,19 @@ body{
 .profile{
   align: right;
   margin: 5px;
+}
+.fa .fa-twitter{
+  margin: 20px;
+}
+.twit-scroll-wrapper{
+  -webkit-overflow-scrolling: touch;
+  	overflow-y: scroll;
+
+	/* important:  dimensions or positioning here! */
+  position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
 }

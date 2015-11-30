@@ -57,11 +57,11 @@
     <!--  nav bar -->
      <nav class="navbar navbar-custom">
        <div class="col-sm-4">
-      <button type="button"  class="btn btn-secondary map-btn">Map</button>
-      <button type="button"  class="btn btn-secondary flickr-btn">Flickr</button>
-      <button type="button"  class="btn btn-secondary twitter-btn">Twitter</button>
+        <button type="button"  class="btn btn-secondary map-btn">Map</button>
+        <button type="button"  class="btn btn-secondary flickr-btn">Flickr</button>
+        <button type="button"  class="btn btn-secondary twitter-btn">Twitter</button>
     </div>
-     </nav>
+   </nav>
 
   <!-- Slider main container -->
       <div class="swiper-container">
@@ -103,18 +103,20 @@
                       });
                         console.log("loaded flickr");
             </script>
-
+            <div class="scroll-wrapper">
               <div class="results" id="results"></div>
+            </div>
         </div>
 
 <!-- Twitter slide -->
     <div class="swiper-slide">
-      <div class="scroll-wrapper">
         <a class="btn btn-social-icon btn-twitter">
           <div class="fa fa-twitter"></div>
         </a>
-      </div>
+      <div class="twit-scroll-wrapper">
+
             <iframe class="tweet" src="index.php" scrolling="yes"></iframe>
+      </div>
     </div>
 
 

@@ -48,7 +48,7 @@ $tweetData = json_decode($twitter->setGetfield($getfield)
         ->buildOauth($url, $requestMethod)
         ->performRequest(), $assoc = TRUE);
 
-    echo $tweetData;
+    
 foreach($tweetData['statuses'] as $items)
 {
 
@@ -64,9 +64,10 @@ foreach ($obj["statuses"] as $index => $result) {
 $tweet = $result['text'];
 $user = $result['user']['screen_name'];
 $profile_image = $result['user']['profile_image_url'];
+$media_url = $result->entities->media[0]->media_url;
 
 echo "<div class='tweet-content'>";
-echo "<img class='tweet-img' src=\"".$profile_banner."\"  />";
+echo "<img class='tweet-img' src=\"".$media_url."\"  />";
 echo "<img class='profile' src=\"".$profile_image."\" width=\"25px\" height=\"25px\" />";
 echo "<a class='link' href=\"http://twitter.com/$user\">@$user</a>";
 echo " $tweet";
