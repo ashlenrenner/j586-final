@@ -43,16 +43,16 @@ body{
     width: 30%;
     margin-top: 5px;
     margin-right: 1px;
-    background: #0099cc;
+    background: #83AC8E;
     color: #ffffff;
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary {
-    background: #33a6cc;
+    background: #CBDFC0;
 }
 
 .btn-secondary:active, .btn-secondary.active {
-    background: #007299;
+    background: #CBDFC0;
     box-shadow: none;
 }
 .map-btn{
@@ -86,7 +86,8 @@ body{
 }
 
 .scroll-wrapper iframe {
-
+  -webkit-overflow-scrolling: touch;
+  	overflow-y: scroll;
 }
 
 .link{
@@ -95,10 +96,11 @@ body{
 }
 
 .tweet-content{
-padding: 10px;
-margin: 10px;
-border: 1px solid gray;
-border-radius: 10px;
+  background-color: #CBDFC0;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
 }
 .profile{
   align: right;
