@@ -1,7 +1,21 @@
 <html>
 <head>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+  <title>Twitter Api</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="tweetLinkIt.js"></script>
+<script>
+      $('.tweet').tweetLinkify();
+      function pageComplete(){
+        $('.tweet').tweetLinkify();
+      }
+    </script>
 </head>
   <body>
 
@@ -47,38 +61,52 @@ $twitter = new TwitterAPIExchange($settings);
 $tweetData = json_decode($twitter->setGetfield($getfield)
         ->buildOauth($url, $requestMethod)
         ->performRequest(), $assoc = TRUE);
+        $obj = json_decode($response, true);
 
-    
+
 foreach($tweetData['statuses'] as $items)
 {
+  $date = new DateTime( $items->created_at );
+      $userArray = $items['user'];
 
+  $entitiesArray = $items['entities'];
+          $mediaArray = $entitiesArray['media'];
+          $tweetMedia = $mediaArray[0];
+          $tweetMedia1 = $mediaArray[1];
+          $tweetMedia2 = $mediaArray[2];
+          $tweetMedia3 = $mediaArray[3];
+          $mediaResize = $tweetMedia['sizes']['thumb']['w'];
+
+
+          $user = ['user']['screen_name'];
+          $profile_image = ['user']['profile_image_url'];
+          $media_url = $result->entities->media[0]->media_url;
+
+      echo "<div class='tweet-content'>";
+          echo "<div class='float-left twitpic'><a target='_blank' href='http://www.twitter.com/" . $userArray['screen_name'] . "'><img class='twitter-pic' target='_blank' src='" . $userArray['profile_image_url'] . "'></a></div>";
+          echo "<img class='tweet-img' src=\"".$media_url."\"  />";
+          echo "<a target='_blank' href='http://www.twitter.com/" . $userArray['screen_name'] . "'><span class='name bold'>" . $userArray['name'] . "</span>   </br><span class='handle'>@" . $userArray['screen_name'] . "</span></a>  <span class='font-small'>&sdot; ";
+          echo "<div class='tweet-txt'>" . $items['text'] . "</div>";
+          echo "<div class='time'>"  . $items['created_at'] . "</div>";
+
+          echo "<a target='_blank' href='" . $tweetMedia['expanded_url'] . "'><img class='twitter-media' target='_blank' src='" . $tweetMedia['media_url'] . "'></a>";
+          echo "<a target='_blank' href='" . $tweetMedia1['expanded_url'] . "'><img class='twitter-media' target='_blank' src='" . $tweetMedia1['media_url'] . "'></a>";
+          echo "<a target='_blank' href='" . $tweetMedia2['expanded_url'] . "'><img class='twitter-media' target='_blank' src='" . $tweetMedia2['media_url'] . "'></a>";
+          echo "<a target='_blank' href='" . $tweetMedia3['expanded_url'] . "'><img class='twitter-media' target='_blank' src='" . $tweetMedia3['media_url'] . "'></a>";
+
+      echo "</div>";
 }
-$response = $twitter->setGetfield($getfield)
-             ->buildOauth($url, $requestMethod)
-             ->performRequest();
-
-$obj = json_decode($response, true);
-echo "<div><ul>";
-foreach ($obj["statuses"] as $index => $result) {
-
-$tweet = $result['text'];
-$user = $result['user']['screen_name'];
-$profile_image = $result['user']['profile_image_url'];
-$media_url = $result->entities->media[0]->media_url;
-
-echo "<div class='tweet-content'>";
-echo "<img class='tweet-img' src=\"".$media_url."\"  />";
-echo "<img class='profile' src=\"".$profile_image."\" width=\"25px\" height=\"25px\" />";
-echo "<a class='link' href=\"http://twitter.com/$user\">@$user</a>";
-echo " $tweet";
-echo "<div class='time'>"  . $items['created_at'] . "</div>";
-    echo "</div>";
-}
-
-echo "</ul></div>";
 
 
 
-    ?>
+
+
+echo "<script>pageComplete();</script>;"
+?>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
   </body>
   </html>

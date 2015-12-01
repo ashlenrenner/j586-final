@@ -10,24 +10,38 @@ $(document).ready(function () {
         loop: true
 
 
-   })
+}); //closes new swiper
+// var button1 = [];
+//
+// if (data-slide-index == 0) {
+//    $('#button1').css('background-color': #CBDFC0)})
+//    else {
+//   $('#button1').css('background-color': '#83AC8E')
+// }
 
-// tinyscrollbar
+}); //closes doc ready
 
-$("#scrollbar1").tinyscrollbar(
-  touchLock = true
 
-);
 
-//navbar fade
-window.addEventListener("scroll", function() {
-    if (window.scrollY > 500) {
-        $('.navbar').fadeOut();
-    }
-    else {
-        $('.navbar').fadeIn();
-    }
-},false);
+// function activateButton(){
+//   // $('a[0]').on('click', function () {
+//     swiper.slideTo($(this).attr('0'));
+//   console.log("button activated");
+//   // });
+// } //closes activateButton
 
- });
- 
+// function activateButton () {
+//     var index = document.getElementByClassName("data-slide-index");
+//     var button1 = document.getElementById("button1");
+//
+//
+//     if (button1.clicked == true) {
+//         index.data-slide-index = "0";};    // } else if (no.clicked == true) {
+//     //     box.style.backgroundColor = "green";
+//     // } else {
+//     //     box.style.backgroundColor = "purple";
+//     // };
+// };
+//
+// activateButton ();
+// //buttons

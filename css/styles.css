@@ -1,21 +1,21 @@
 /*swiper setup*/
 html, body {
   height: 100%;
-  background-color: #83AC8E;
+  background-color: #CBDFC0;
 
 }
 body{
-  background-color: #83AC8E;
+  background-color: #CBDFC0;
 }
 .swiper-container {
     width: 100%;
     height: 100%;
-    background-color: #83AC8E;
+    background-color: #CBDFC0;
 }
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #83AC8E;
+  background: #CBDFC0;
       }
 /*navbar*/
 .navbar{
@@ -101,7 +101,7 @@ body{
 }
 
 .tweet-content{
-  background-color: #CBDFC0;
+  background-color: #FAFCFC;
   font-family: Helvetica;
   padding: 10px;
   margin: 10px;
