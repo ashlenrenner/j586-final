@@ -9,35 +9,7 @@ function initMap() {
     mapTypeId: google.maps.MapTypeId.HYBRID
   });
 
-// ajax call for the map
-// var park = [];
-// var lat = [];
-// var long = [];
-// var title = [];
-//
-// $(document).ready(function() {
-//
-//   $.ajax({
-//       type: 'GET',
-//       url: 'parks.xml',
-//       dataType: 'xml',
-//       success: parseData
-//     });
-//     function parseData(xml){
-//
-// console.log(xml);
-//
-//   $(xml).find("row").each(function(){
-//     var $row = $(this);
-//     title.push(parseFloat($row.find("title").text()));
-//     lat.push(parseInt($row.find("lat").text()));
-//     long.push(parseInt($row.find("long").text()));
-//   });
-//
-//   buildMarker();
-// } //closes parseData function
-//
-// function buildMarker(xml){
+
 var contentString1 = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+

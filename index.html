@@ -24,9 +24,9 @@
    </head>
       <!-- Optional theme -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
-<link href="http://getbootstrap.com/favicon.ico" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      <link href="http://getbootstrap.com/favicon.ico" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <!-- Latest compiled and minified JavaScript -->
@@ -72,37 +72,31 @@
 <!-- intro slide -->
     <div class="swiper-slide">
       <div class="scroll-wrapper">
-    <div class="image">
-      <img class="intro-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Mount_Mitchell_Fall_Foliage.JPG/1024px-Mount_Mitchell_Fall_Foliage.JPG" />
-        <h4><span class="spacer">N.C. State Parks</span></h4>
-    </div>
+        <div class="image">
+          <img class="intro-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Mount_Mitchell_Fall_Foliage.JPG/1024px-Mount_Mitchell_Fall_Foliage.JPG" />
+            <h3><span class="spacer">N.C. State Parks</span></h3>
+        </div>
       <div class="slide-intro">
-        North Carolina's state parks stretches from the highest sand dune on the East Coast to the highest point in the eastern U.S.
-      </br>Swipe to explore the locations, wildlife and events at N.C. State Parks.
+          North Carolina's state parks stretches from the highest sand dune on the East Coast to the highest point in the eastern U.S.
+        </br>Swipe to explore the locations, wildlife and events at N.C. State Parks.
       </div>
-      <div class="intro"> Learn More about NC State Parks</div>
+        <div class="intro"> Learn More about NC State Parks</div>
           <a href="http://ncparks.gov/"> <img class="logo" src="http://ncparks.gov/sites/default/files/ncparks/dpr-logo_1.png" /></a>
-</div>
-
+     </div>
     </div>
 
 <!-- map slide -->
-
-<div class="swiper-slide">
+  <div class="swiper-slide">
             <!-- Map scripts -->
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAtg-NY0mR5JxGHWAPGZtSQoi-FIj6Zro&callback=initMap"
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAtg-NY0mR5JxGHWAPGZtSQoi-FIj6Zro&callback=initMap"
                 async defer></script>
-            <script src="js/map.js"></script>
-            <div class="scroll-wrapper">
+                <script src="js/map.js"></script>
             <div class="intro">Find NC Parks near you</div>
               <div id="map"></div>
-            </div>
-          </div>
+  </div>
   <!-- flickr slide -->
   <div class="swiper-slide">
-
-            <script type="text/javascript">
-
+        <script type="text/javascript">
                 var html = ""  // string to hold data before writing to page
                 //use any of the flickr api endpoints
                 var apiurl = "https://api.flickr.com/services/feeds/photos_public.gne?tags=ncstateparks&format=json&jsoncallback=?"
@@ -115,7 +109,7 @@
 
                             $.each(json.items, function(i, data){
                               html += '<a target="_blank" href="' + data.link + '"><img src="' + data.media.m + '"></a>'
-                              html += "<p class='flickr-title'>" + data.title + "</p>";
+                              html += "<p class='flickr-head'>" + data.title + "</p>";
 
                             })
                             //after loop code
@@ -126,19 +120,18 @@
             </script>
             <div class="scroll-wrapper">
               <div class="flickr-intro">Recent Photos of N.C. State Parks
-              <a href="https://www.flickr.com/"class="btn btn-social-icon btn-flickr">
-                <div class="fa fa-flickr"></div>
-              </a>
+                <a href="https://www.flickr.com/"class="btn btn-social-icon btn-flickr">
+                  <div class="fa fa-flickr"></div>
+                </a>
               </div>
               <div class="results" id="results"></div>
             </div>
-        </div>
+      </div>
 
 <!-- Twitter slide -->
     <div class="swiper-slide">
           <div class="twit-scroll-wrapper">
             <div class="twit-intro">What's Happening at N.C. State Parks</div>
-
               <a href="https://twitter.com"class="btn btn-social-icon btn-twitter">
                 <div class="fa fa-twitter"></div>
               </a>

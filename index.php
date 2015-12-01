@@ -100,7 +100,7 @@ foreach($tweetData['statuses'] as $items)
 
 
 
-echo "<script>pageComplete();</script>;"
+echo "<script>pageComplete();</script>";
 ?>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
