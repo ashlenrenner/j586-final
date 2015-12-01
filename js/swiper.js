@@ -23,12 +23,12 @@ $(document).ready(function () {
 
 
 
-// function activateButton(){
-//   // $('a[0]').on('click', function () {
-//     swiper.slideTo($(this).attr('0'));
-//   console.log("button activated");
-//   // });
-// } //closes activateButton
+function activateButton(){
+  $('a[0]').on('click', function () {
+    swiper.slideTo($(this).attr('0'));
+  console.log("button activated");
+  });
+} //closes activateButton
 
 // function activateButton () {
 //     var index = document.getElementByClassName("data-slide-index");
