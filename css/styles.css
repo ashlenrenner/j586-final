@@ -33,6 +33,7 @@ body{
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus {
@@ -45,6 +46,7 @@ body{
     margin-right: 1px;
     background: #83AC8E;
     color: #ffffff;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary {
@@ -55,19 +57,22 @@ body{
     background: #CBDFC0;
     box-shadow: none;
 }
-.map-btn{
-  align-items: left;
+.intro{
+  font-family: 'Roboto', sans-serif;
 }
-.flickr-btn{
-  align-items: center;
-}
-.twitter-btn{
-  align-items: right;
-}
+
 #map {
   height: 70%;
 
 }
+.flickr-title{
+  margin-left: 50px;
+  text-align:left;
+  font-family: helvetica;
+  font-weight: bold;
+  font-size: 12px;
+}
+
 /*Twitter styles*/
 .fa-twitter .btn-social-icon{
   align: right;
@@ -84,7 +89,7 @@ body{
 
 	/* important:  dimensions or positioning here! */
   position: absolute;
-    top: 50px;
+    top: 0px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -94,26 +99,64 @@ body{
 .scroll-wrapper iframe {
 
 }
+.profile{
+  align-items: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.attr-name{
+  float: right;
+}
+/*the name*/
+.screen-name{
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 0px;
 
-.link{
+}
+.screen-name:hover{
+  text-decoration: none;
+  color: #2C9349;
+
+}
+.screen-name:active{
+  text-decoration: none;
+  color: #2C9349;
+}
+/*the @ part*/
+.user-name {
   font-family: sans-serif;
   color: green;
+  margin-top: 0px;
+}
+.twitter-media{
+  max-width: 200px;
+  margin-left: 25px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.time{
+  color: #a9b7c1;
+  font-family: helvetica;
+  font-size: 10px;
+  margin-top: 5px;
 }
 
 .tweet-content{
   background-color: #FAFCFC;
-  font-family: Helvetica;
+  font-family: Helvetica ;
   padding: 10px;
   margin: 10px;
   border: 1px solid gray;
   border-radius: 10px;
 }
-.profile{
-  align: right;
-  margin: 5px;
-}
-.fa .fa-twitter{
-  margin: 20px;
+
+.btn-twitter{
+  margin-top: 10px;
+  margin-left: 20px;
+  float: left;
 }
 .twit-scroll-wrapper{
   -webkit-overflow-scrolling: touch;

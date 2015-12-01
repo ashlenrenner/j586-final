@@ -83,16 +83,15 @@ foreach($tweetData['statuses'] as $items)
           $media_url = $result->entities->media[0]->media_url;
 
       echo "<div class='tweet-content'>";
-          echo "<div class='float-left twitpic'><a target='_blank' href='http://www.twitter.com/" . $userArray['screen_name'] . "'><img class='twitter-pic' target='_blank' src='" . $userArray['profile_image_url'] . "'></a></div>";
-          echo "<img class='tweet-img' src=\"".$media_url."\"  />";
-          echo "<a target='_blank' href='http://www.twitter.com/" . $userArray['screen_name'] . "'><span class='name bold'>" . $userArray['name'] . "</span>   </br><span class='handle'>@" . $userArray['screen_name'] . "</span></a>  <span class='font-small'>&sdot; ";
-          echo "<div class='tweet-txt'>" . $items['text'] . "</div>";
-          echo "<div class='time'>"  . $items['created_at'] . "</div>";
+          echo "<div class='float-left twitpic'><a target='_blank' href='http://www.twitter.com/" . $userArray['screen_name'] . "'><img class='profile' target='_blank' src='" . $userArray['profile_image_url'] . "'></a>";
 
+          echo "<a target='_blank' href='http://www.twitter.com/" . $userArray['screen_name'] . "'><span class='screen-name'>" . $userArray['name'] . "</span>   </br><span class='user-name'>@" . $userArray['screen_name'] . "</span></a> </div> ";
+          echo "<div class='tweet-txt'>" . $items['text'] . "</div>";
           echo "<a target='_blank' href='" . $tweetMedia['expanded_url'] . "'><img class='twitter-media' target='_blank' src='" . $tweetMedia['media_url'] . "'></a>";
           echo "<a target='_blank' href='" . $tweetMedia1['expanded_url'] . "'><img class='twitter-media' target='_blank' src='" . $tweetMedia1['media_url'] . "'></a>";
           echo "<a target='_blank' href='" . $tweetMedia2['expanded_url'] . "'><img class='twitter-media' target='_blank' src='" . $tweetMedia2['media_url'] . "'></a>";
           echo "<a target='_blank' href='" . $tweetMedia3['expanded_url'] . "'><img class='twitter-media' target='_blank' src='" . $tweetMedia3['media_url'] . "'></a>";
+          echo "<div class='time'>"  . $date->format( 'M jS' ) . "</div>";
 
       echo "</div>";
 }

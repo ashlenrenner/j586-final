@@ -11,6 +11,7 @@
     <!-- CSS stylesheet -->
       <link rel="stylesheet" href="css/styles.css">
       <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
       <!-- tinyscroll -->
         <link rel="stylesheet" href="css/tinyscrollbar.css">
 
@@ -76,7 +77,7 @@
                 async defer></script>
             <script src="js/map.js"></script>
               <div id="map"></div>
-              <div>Tap the map for information about NC State Parks.</div>
+              <div class="intro">Tap the map for information about NC State Parks.</div>
           </div>
   <!-- flickr slide -->
   <div class="swiper-slide">
@@ -84,7 +85,7 @@
 
                 var html = ""  // string to hold data before writing to page
                 //use any of the flickr api endpoints
-                var apiurl = "https://api.flickr.com/services/feeds/photos_public.gne?tags=ncparks&format=json&jsoncallback=?"
+                var apiurl = "https://api.flickr.com/services/feeds/photos_public.gne?tags=ncstateparks&format=json&jsoncallback=?"
                 $(document).ready(function(){
                         console.log("document ready")
                         $.getJSON(apiurl,function(json){
@@ -93,8 +94,8 @@
                             // html = "<h1>" + json.title + "</h1>"
 
                             $.each(json.items, function(i, data){
-                              html += "<p>" + data.title + "</p>";
-                              html += '<img src="' + data.media.m + '">'
+                              html += '<a target="_blank" href="' + data.link + '"><img src="' + data.media.m + '"></a>'
+                              html += "<p class='flickr-title'>" + data.title + "</p>";
 
                             })
                             //after loop code
@@ -110,7 +111,7 @@
 
 <!-- Twitter slide -->
     <div class="swiper-slide">
-        <a class="btn btn-social-icon btn-twitter">
+        <a href="https://twitter.com"class="btn btn-social-icon btn-twitter">
           <div class="fa fa-twitter"></div>
         </a>
       <div class="twit-scroll-wrapper">
