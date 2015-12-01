@@ -45,3 +45,7 @@ $(document).ready(function () {
 //
 // activateButton ();
 // //buttons
+$(document).ready(function()
+{
+    $("#scrollbar1").tinyscrollbar();
+});

@@ -69,15 +69,29 @@
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
 <!-- Slides -->
-<!-- map slide -->
-<div class="swiper-slide">
+<!-- intro slide -->
+    <div class="swiper-slide">
+      <div class="scroll-wrapper">
+      <img src="https://farm1.staticflickr.com/736/22687093677_1f02a65b4e_m.jpg" />
+      <div class="slide-intro">
+        North Carolina's state parks stretches from the highest sand dune on the East Coast to the highest point in the eastern U.S.
+      </div>
+      <div class="intro"> Learn More about NC State Parks</div>
+          <a href="http://ncparks.gov/"> <img class="logo" src="http://ncparks.gov/sites/default/files/ncparks/dpr-logo_1.png" /></a>
+</div>
 
+    </div>
+
+<!-- map slide -->
+
+<div class="swiper-slide">
             <!-- Map scripts -->
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAtg-NY0mR5JxGHWAPGZtSQoi-FIj6Zro&callback=initMap"
                 async defer></script>
             <script src="js/map.js"></script>
+            <div class="intro">Tap the map for information about NC State Parks.</div>
               <div id="map"></div>
-              <div class="intro">Tap the map for information about NC State Parks.</div>
+
           </div>
   <!-- flickr slide -->
   <div class="swiper-slide">
@@ -120,10 +134,7 @@
       </div>
     </div>
 
-
-
-
-      <!-- If we need pagination -->
+        <!-- If we need pagination -->
       <!-- <div class="swiper-pagination"></div> -->
 
       <!-- If we need navigation buttons -->
@@ -135,23 +146,7 @@
 
   </div> <!-- closes swiper wrapper-->
 </div> <!--closes slider container-->
-
-
-
-
-
-
-
-<!-- code for linkify -->
-<!-- <script>
-$('.tweet').tweetLinkify();
-
-function pageComplete(){
-       $('.tweet').tweetLinkify();
-   }
-</script> -->
-
-<!-- Swiper -->
+<!-- footer -->
 
   </body>
 </html>
